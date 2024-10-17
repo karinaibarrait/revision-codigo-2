@@ -1,0 +1,13 @@
+html body{
+    background-color: rgba(175, 214, 249, 0.272);
+}
+
+/* Estilo para el contenedor de cada invitado */
+.elemento-lista {
+    font-size: 16px;
+    text-align: left;
+  }
+
+.lista-invitados-titulo {
+    text-align: center;
+}

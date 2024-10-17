@@ -13,70 +13,80 @@
   <title>Formulario</title>
 </head>
 
-<body class="d-flex">
+<body class="d-flex justify-content-center align-items-center">
   <!-- Se aplicaron clases Bootstrap al body para centrar el contenido tanto vertical como horizontalmente -->
   <!-- d-flex: para usar el modelo flexbox -->
   <!-- justify-content-center: para centrar horizontalmente -->
   <!-- align-items-center: para centrar verticalmente -->
-  <!-- vh-100: para ocupar toda la altura de la ventana -->
+
+
   <div class="container">
     <!-- Se agregó un contenedor centrado con Bootstrap para contener el formulario -->
-    <h1 class="text-center mt-4">Bienvenidos a mi fiesta</h1>
-    <h2 class="text-center">Por favor, confirmar asistencia:</h2>
-    <!-- se cambio class por id y se añadió margen superior (mt-4) al formulario para separar el título del contenido -->
-    <form id="formulario" class="mt-2">
+    <div class="row mb-5">
+      <!-- Se dividió el contenido en filas y columnas para mejor control de la disposición -->
+      <div class="col-md-8 offset-md-2">
+        <!-- Columna centrada que ocupa 8 de las 12 columnas disponibles y se desplaza 2 para centrar -->
+        <h1 class="text-center mt-4">Bienvenidos a mi fiesta</h1>
+        <h2 class="text-center">Por favor, confirmar asistencia:</h2>
+        <!-- se cambio class por id y se añadió margen superior (mt-4) al formulario para separar el título del contenido -->
+        <form id="formulario" class="mt-2">
 
-      <!-- Campo Nombre -->
-      <div class="mb-3">
-        <!-- Se agregó una clase "mb-3" para dar margen inferior a este campo -->
-        <label for="name" class="form-label">Nombre:</label>
-        <!-- Se agregó la clase Bootstrap "form-label" para estilizar el label -->
-        <input type="text" name="name" class="form-control" id="name">
-        <!-- Se agregó la clase Bootstrap "form-control" para aplicar el estilo adecuado al campo de entrada -->
-      </div>
-      <!-- <br/> Se quitó br para dar formato mediante bootstrap y css -->
-      <!-- Edad -->
-      <div class="mb-3">
-        <!-- Se agregó una clase "mb-3" para dar margen inferior a este campo -->
-        <label for="age" class="form-label">Edad:</label>
-        <!-- Se agregó la clase Bootstrap "form-label" para estilizar el label -->
-        <input type="number" name="age" class="form-control" id="age">
-        <!-- Se agregó la clase Bootstrap "form-control" para aplicar el estilo adecuado al campo de entrada -->
-      </div>
+          <!-- Campo Nombre -->
+          <div class="mb-3">
+            <!-- Se agregó una clase "mb-3" para dar margen inferior a este campo -->
+            <label for="name" class="form-label">Nombre:</label>
+            <!-- Se agregó la clase Bootstrap "form-label" para estilizar el label -->
+            <input type="text" name="name" class="form-control" id="name">
+            <!-- Se agregó la clase Bootstrap "form-control" para aplicar el estilo adecuado al campo de entrada -->
+          </div>
+          <!-- <br/> Se quitó br para dar formato mediante bootstrap y css -->
 
-      <!-- Campo Nacionalidad -->
-      <div class="mb-3">
-        <!-- Se agregó una clase "mb-3" para dar margen inferior a este campo -->
-        <label for="nationality" class="form-label">Nacionalidad:</label>
-        <!-- Se agregó la clase Bootstrap "form-label" para estilizar el label -->
-        <select name="nationality" id="nationality" class="form-select">
-          <!-- Se agregó la clase Bootstrap "form-select" para estilizar el campo de selección -->
-          <option value="ar">Argentina</option>
-          <option value="mx">Mexicana</option>
-          <option value="per">Peruana</option>
-          <option value="vnzl">Venezolana</option>
-        </select>
-      </div>
+          <!-- Edad -->
+          <div class="mb-3">
+            <!-- Se agregó una clase "mb-3" para dar margen inferior a este campo -->
+            <label for="age" class="form-label">Edad:</label>
+            <!-- Se agregó la clase Bootstrap "form-label" para estilizar el label -->
+            <input type="number" name="age" class="form-control" id="age">
+            <!-- Se agregó la clase Bootstrap "form-control" para aplicar el estilo adecuado al campo de entrada -->
+          </div>
 
-      <!-- <br/> Se quitó br para dar formato mediante bootstrap y css -->
-      <!-- Se reemplazó el input de tipo submit por un botón para mayor personalización -->
+          <!-- Campo Nacionalidad -->
+          <div class="mb-3">
+            <!-- Se agregó una clase "mb-3" para dar margen inferior a este campo -->
+            <label for="nationality" class="form-label">Nacionalidad:</label>
+            <!-- Se agregó la clase Bootstrap "form-label" para estilizar el label -->
+            <select name="nationality" id="nationality" class="form-select">
+              <!-- Se agregó la clase Bootstrap "form-select" para estilizar el campo de selección -->
+              <option value="ar">Argentina</option>
+              <option value="mx">Mexicana</option>
+              <option value="per">Peruana</option>
+              <option value="vnzl">Venezolana</option>
+            </select>
+          </div>
 
-      <!-- Botón Enviar -->
-      <div class="mb-3 d-flex justify-content-center">
-        <!-- Se agregó una clase "mb-3" para dar margen inferior al botón -->
-        <button type="submit" class="btn btn-primary">Enviar</button>
-        <!-- Se agregó la clase Bootstrap "btn btn-primary" para estilizar el botón con colores y estilos predeterminados -->
+          <!-- <br/> Se quitó br para dar formato mediante bootstrap y css -->
+          <!-- Se reemplazó el input de tipo submit por un botón para mayor personalización -->
+
+          <!-- Botón Enviar -->
+          <div class="mb-3 d-flex justify-content-center">
+            <!-- Se agregó una clase "mb-3" para dar margen inferior al botón -->
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <!-- Se agregó la clase Bootstrap "btn btn-primary" para estilizar el botón con colores y estilos predeterminados -->
+          </div>
+        </form>
       </div>
-    </form>
-  </div>
+    </div>
 
     <!-- Lista de invitados -->
-    <div class="container mt-4 text-center">
-      <h2 id="lista-invitados">Lista de invitados: </h2>
+    <div class="row">
+      <div class="col-md-8 offset-md-2 mt-4">
+        <!-- Se agregó una columna centrada para la lista de invitados -->
+        <h2 id="lista-invitados" class="lista-invitados-titulo">Lista de invitados:</h2>
+      </div>
     </div>
-  
+  </div>
 
-  <!-- <script src="../formulario.js"></script> Se referencio correctamente el formulario-->
+  <!-- <script src="../formulario.js"></script> Se referencio correctamente el formulario -->
   <script src="./formulario.js"></script>
   <!-- Se agrego bootstrap para mejor manejo del formulario -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -85,4 +95,3 @@
 </body>
 
 </html>
-
